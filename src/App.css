@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 全体背景：ブルーの水玉パターン */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #e6f0fa;
+  background-image:
+    radial-gradient(#8cb8e6 15%, transparent 16%),
+    radial-gradient(#8cb8e6 15%, transparent 16%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* メインカード */
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(27, 85, 148, 0.12);
+  border: 1px solid #d0e1f9;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  color: #1b4965;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* フォーム */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input {
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 2px solid #b8d4f0;
+  background-color: #f8fbfe;
+  color: #2b2b2b;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #2a6f97;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(42, 111, 151, 0.15);
+}
+
+.button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #014f86;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: #2a6f97;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* 生成結果表示エリア */
+.qr-result {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.url-label {
+  font-size: 13px;
+  color: #4a5568;
+  word-break: break-all;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.qr-frame {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d0e1f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hint {
+  font-size: 12px;
+  color: #2a6f97;
+  font-weight: 500;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
